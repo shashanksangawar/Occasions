@@ -1,0 +1,18 @@
+{
+  "id": "mig_cofjkak6btciiaoq7o8g",
+  "parentID": "mig_cofd0uhi8ag8nohmf8bg",
+  "checksum": "1:ca2958793dd70936d14e5d62d07299bf91493ec7f6ff80f1c89288aebd30f5ec",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "SaltPassword",
+          "type": "text",
+          "notNull": true,
+          "defaultValue": "Appniche_Occasions"
+        },
+        "table": "user_details"
+      }
+    }
+  ]
+}

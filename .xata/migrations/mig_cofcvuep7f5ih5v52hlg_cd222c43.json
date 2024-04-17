@@ -1,0 +1,18 @@
+{
+  "id": "mig_cofcvuep7f5ih5v52hlg",
+  "parentID": "mig_cofcushi8ag8nohmf8ag",
+  "checksum": "1:cd222c432bb49d4384b82c8b4b9d2cff0e40e3a031b78e57c6e579e9c2bd22d5",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "HashedPassword",
+          "type": "text",
+          "notNull": true,
+          "defaultValue": "occasions"
+        },
+        "table": "user_details"
+      }
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Appniche-s-workspace-uqsalv.us-east-1.xata.sh/db/Occasions",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}
