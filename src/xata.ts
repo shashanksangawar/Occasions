@@ -25,6 +25,57 @@ const tables = [
         defaultValue: "Appniche_Occasions",
       },
     ],
+    revLinks: [{ column: "User_Id", table: "user_address" }],
+  },
+  {
+    name: "user_address",
+    columns: [
+      { name: "User_Id", type: "link", link: { table: "user_details" } },
+      {
+        name: "Apartment",
+        type: "string",
+        notNull: true,
+        defaultValue: "Apartment",
+      },
+      { name: "Road", type: "string", notNull: true, defaultValue: "Road" },
+      {
+        name: "Landmark",
+        type: "string",
+        notNull: true,
+        defaultValue: "Landmark",
+      },
+      { name: "City", type: "string", notNull: true, defaultValue: "City" },
+      {
+        name: "Country",
+        type: "string",
+        notNull: true,
+        defaultValue: "Country",
+      },
+      {
+        name: "ZipCode",
+        type: "string",
+        notNull: true,
+        defaultValue: "Zip Code",
+      },
+      {
+        name: "AddressType",
+        type: "string",
+        notNull: true,
+        defaultValue: "Active",
+      },
+      {
+        name: "Room",
+        type: "string",
+        notNull: true,
+        defaultValue: "Block No. 101",
+      },
+      {
+        name: "State",
+        type: "string",
+        notNull: true,
+        defaultValue: "Maharashtra",
+      },
+    ],
   },
 ] as const;
 
@@ -34,8 +85,12 @@ export type InferredTypes = SchemaInference<SchemaTables>;
 export type UserDetails = InferredTypes["user_details"];
 export type UserDetailsRecord = UserDetails & XataRecord;
 
+export type UserAddress = InferredTypes["user_address"];
+export type UserAddressRecord = UserAddress & XataRecord;
+
 export type DatabaseSchema = {
   user_details: UserDetailsRecord;
+  user_address: UserAddressRecord;
 };
 
 const DatabaseClient = buildClient();

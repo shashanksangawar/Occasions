@@ -1,3 +1,5 @@
+// http://localhost:3000/api/auth/forgot_password
+
 import { NextRequest, NextResponse } from "next/server";
 import { forget_password } from "./logic/user";
 export async function PUT(request: NextRequest) 

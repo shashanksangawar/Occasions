@@ -1,11 +1,11 @@
-// /api/auth/account_delete/logic/user.ts
-import { getXataClient } from "../../../../../xata";
+// /api/address/delete/address/logic/delete.ts
+import { getXataClient } from "../../../../../../xata";
 
 // Database Connection Pool
 const connection = getXataClient();
 
 // Fetch a Single User Credentials
-export async function account_delete(data: JSON | any) 
+export async function address_delete(data: JSON | any) 
 {
     try
     {
@@ -20,20 +20,19 @@ export async function account_delete(data: JSON | any)
 
         try 
         {
-            const user_id: String | any = data['user_id'];
-            
-            let user_check: any = await connection.db.user_details.filter({id: user_id}).getAll();
+            const address_id: String | any = data['address_id'];
+            let user_check: any = await connection.db.user_address.filter({id: address_id}).getAll();
             user_check = JSON.parse(user_check);
 
             // Check for UserId
             try
             {
-                if(user_check[0].id==user_id)
+                if(user_check[0].id==address_id)
                 {
-                    let user: any = await connection.db.user_details.delete(user_id);
+                    let user: any = await connection.db.user_address.delete(address_id);
                     return {
                         'returncode': 0,
-                        'message': "Account Deleted.",
+                        'message': "Address Deleted.",
                         'output': user
                     }
                 }
@@ -41,9 +40,10 @@ export async function account_delete(data: JSON | any)
             }
             catch(error: any)
             {
+                console.log(error.message);
                 return {
                     'returncode': 400,
-                    'message': "Account Not Found.",
+                    'message': "Address Not Found.",
                     'output': []
                 }
             }

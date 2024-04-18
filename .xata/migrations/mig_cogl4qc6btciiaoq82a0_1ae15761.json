@@ -1,0 +1,18 @@
+{
+  "id": "mig_cogl4qc6btciiaoq82a0",
+  "parentID": "mig_cogav11i8ag8nohmfh0g",
+  "checksum": "1:1ae157615df92fd040a23cfb178ae3efd6c3de2291c1ae322c79a6b73ffc7448",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "State",
+          "type": "string",
+          "notNull": true,
+          "defaultValue": "Maharashtra"
+        },
+        "table": "user_address"
+      }
+    }
+  ]
+}

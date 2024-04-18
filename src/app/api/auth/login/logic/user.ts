@@ -1,4 +1,4 @@
-// pages/api/read/user.ts
+// /api/auth/login/logic/user.ts
 
 import { getXataClient } from "../../../../../xata";
 import bcrypt from 'bcrypt';
@@ -9,7 +9,6 @@ export async function sign_in(username: any, password: any)
 {
     try
     {
-        console.log(password);
         if(connection==undefined || connection==null)
         {
             return {

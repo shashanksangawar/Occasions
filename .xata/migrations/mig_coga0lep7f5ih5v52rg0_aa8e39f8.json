@@ -1,0 +1,18 @@
+{
+  "id": "mig_coga0lep7f5ih5v52rg0",
+  "parentID": "mig_coga08up7f5ih5v52rf0",
+  "checksum": "1:aa8e39f8fe36002c9380758ba32d1eeb01faef54bfbea14d6942ad2d90e14abf",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "AddressType",
+          "type": "string",
+          "notNull": true,
+          "defaultValue": "Address Type"
+        },
+        "table": "user_address"
+      }
+    }
+  ]
+}

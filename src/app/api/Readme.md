@@ -1,52 +1,52 @@
 
-# API Requests
+# 🚀 Backend Structure
 
+
+```yaml
+/
+├── api/
+│   └── auth/
+│       └── login/
+│       └── register/
+│       └── forgot_password/
+│       └── account_delete/
+│   └── address/
+│       └── update/
+│       └── insert/
+│       └── delete/
+│           └── address/
+│       └── fetch/
+│           └── address/
+│           └── user/
+
+```
+
+
+# 🤖 MICROSERVICES API CALLS
 
 ----------------------------------------------------------------------------------
 
-### Student 
+### Authentication 🔐
 
-###### 1. Login
-http://localhost:3000/api/student/login
-`POST`
-```json
-{
-    "username":"student",
-    "password":"user@123"
-}
-```
+| Function                      | API Call                                               | Method            |
+| :------------------------     | :-----------------------------------------------       |:------------------|
+| `Login`                       |     http://localhost:3000/api/auth/login               |   `POST`          |
+| `Register`                    |     http://localhost:3000/api/auth/register            |   `POST`          |
+| `Account Delete`              |     http://localhost:3000/api/auth/account_delete      |   `DELETE`        |
+| `Forgot Password`             |     http://localhost:3000/api/auth/forgot_password     |   `PUT`           |
 
-###### 2. Register (*To be used one time only*)
-http://localhost:3000/api/student/register
-`POST`
-```json
-{
-    "username":"user",
-    "email":"user@gmail.com",
-    "password":"user@123",
-}
-```
+----------------------------------------------------------------------------------
 
 
-###### 3. Forgot Password
-http://localhost:3000/api/auth/forgot_password
-`POST`
-```json
-{
-    "username": "user",
-    "password":"user@123",
-    "new_password": "user@#123"
-}
-```
+### Address 🏠
 
-###### 4. Account Delete(*To be used one time only*)
-http://localhost:3000/api/auth/account_delete
-`POST`
-```json
-{
-    "user_id": "rec_cofkdbtmk0vfn4o7gn00"
-}
-```
-
+| Function                      | API Call                                               | Method            |
+| :------------------------     | :-----------------------------------------------       |:------------------|
+| `Insert Address`              |      http://localhost:3000/api/address/insert/         |   `POST`          |
+| `Update Status`               |      http://localhost:3000/api/address/update/status   |   `PUT`           |
+| `Update Address`              |      http://localhost:3000/api/address/update/address  |   `PUT`           |
+| `Fetch Address`               |      http://localhost:3000/api/address/fetch/address   |   `POST`          |
+| `Fetch User's all addresses`  |      http://localhost:3000/api/address/fetch/user      |   `POST`          |
+| `Delete Address`              |      http://localhost:3000/api/address/delete/address  |   `DELETE`        |
 
 ----------------------------------------------------------------------------------

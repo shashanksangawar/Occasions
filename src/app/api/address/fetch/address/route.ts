@@ -1,27 +1,24 @@
-// http://localhost:3000/api/auth/account_delete
+// http://localhost:3000/api/address/fetch/address
 
 import { NextRequest, NextResponse } from "next/server";
-import { account_delete } from "./logic/user";
+import { address_fetch } from "./logic/address";
 
-export async function DELETE(request: NextRequest) 
+//  Delete a User Address
+export async function POST(request: NextRequest)
 {
-    try
+    try 
     {
-
-        // For Adding a Single Product
         const data: JSON | any = await request.json();
-
-    
-        const delete_result: any = await account_delete(data); 
-        if(delete_result.returncode==0)
+        const fetch_result: any = await address_fetch(data); 
+        if(fetch_result.returncode==0)
         {
             
             return NextResponse
             .json(
                 {
                     'returncode': 0,
-                    'message': 'Password Changed.',
-                    'output': delete_result.output
+                    'message': 'Address Fetched',
+                    'output': fetch_result.output
                 },
                 {
                     status: 200,
@@ -33,27 +30,28 @@ export async function DELETE(request: NextRequest)
             return NextResponse
             .json(
                 {
-                    'returncode': delete_result.returncode,
-                    'message': delete_result.message,
-                    'output': delete_result.output
+                    'returncode': fetch_result.returncode,
+                    'message': fetch_result.message,
+                    'output': fetch_result.output
                 },
                 {
-                    status: delete_result.returncode,
+                    status: fetch_result.returncode,
                 });
         
         }
-    
-    }
+
+    } 
     catch (error: any) 
     {
         return NextResponse.json(
             {
                 'returncode': 400,
                 'message': error.message,
-                'output': []
+                'output':[]
             },
             {
-                status: 400,
-            });
+                status: 400
+            }
+        );
     }
 }

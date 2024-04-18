@@ -1,0 +1,18 @@
+{
+  "id": "mig_cog9vs46btciiaoq7ul0",
+  "parentID": "mig_cog9vcep7f5ih5v52rag",
+  "checksum": "1:2c526935c0fde32f876221b8840c53c3d5a9376265d60a123b6a6f0a52fe723d",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "ZipCode",
+          "type": "string",
+          "notNull": true,
+          "defaultValue": "Zip Code"
+        },
+        "table": "user_address"
+      }
+    }
+  ]
+}

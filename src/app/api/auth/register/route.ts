@@ -1,3 +1,5 @@
+// http://localhost:3000/api/auth/register
+
 import { NextRequest, NextResponse } from "next/server";
 import { signup } from "./logic/user";
 
@@ -8,9 +10,7 @@ export async function POST(request: NextRequest)
     {
 
         // For Adding a Single Product
-        const data: JSON | any = await request.json();
-
-    
+        const data: JSON | any = await request.json();    
         const user_add_result = await signup(data); 
         if(user_add_result.returncode==0)
         {

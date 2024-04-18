@@ -1,27 +1,24 @@
-// http://localhost:3000/api/auth/account_delete
+// http://localhost:3000/api/address/insert
 
 import { NextRequest, NextResponse } from "next/server";
-import { account_delete } from "./logic/user";
+import { add_address } from "./logic/add";
 
-export async function DELETE(request: NextRequest) 
+//  Add a User Address
+export async function POST(request: NextRequest)
 {
-    try
+    try 
     {
-
-        // For Adding a Single Product
         const data: JSON | any = await request.json();
-
-    
-        const delete_result: any = await account_delete(data); 
-        if(delete_result.returncode==0)
+        const address_add: any = await add_address(data); 
+        if(address_add.returncode==0)
         {
             
             return NextResponse
             .json(
                 {
                     'returncode': 0,
-                    'message': 'Password Changed.',
-                    'output': delete_result.output
+                    'message': 'Address Added',
+                    'output': address_add.output
                 },
                 {
                     status: 200,
@@ -33,27 +30,28 @@ export async function DELETE(request: NextRequest)
             return NextResponse
             .json(
                 {
-                    'returncode': delete_result.returncode,
-                    'message': delete_result.message,
-                    'output': delete_result.output
+                    'returncode': address_add.returncode,
+                    'message': address_add.message,
+                    'output': address_add.output
                 },
                 {
-                    status: delete_result.returncode,
+                    status: address_add.returncode,
                 });
         
         }
-    
-    }
+
+    } 
     catch (error: any) 
     {
         return NextResponse.json(
             {
                 'returncode': 400,
                 'message': error.message,
-                'output': []
+                'output':[]
             },
             {
-                status: 400,
-            });
+                status: 400
+            }
+        );
     }
 }

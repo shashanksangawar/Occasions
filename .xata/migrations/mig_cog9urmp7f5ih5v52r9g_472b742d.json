@@ -1,0 +1,18 @@
+{
+  "id": "mig_cog9urmp7f5ih5v52r9g",
+  "parentID": "mig_cog9u89i8ag8nohmfgm0",
+  "checksum": "1:472b742d37af541e9a642546c61994a31ec92453aaa4edd5d749457e61e459f3",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Landmark",
+          "type": "string",
+          "notNull": true,
+          "defaultValue": "Landmark"
+        },
+        "table": "user_address"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "mig_coga08up7f5ih5v52rf0",
+  "parentID": "mig_coga02up7f5ih5v52re0",
+  "checksum": "1:5a85478f8394d4669f20a45efba1fb04d05b29f7ff73912ff8f024dbbcb335ff",
+  "operations": [
+    {
+      "removeColumn": {
+        "column": "AddressType",
+        "table": "user_address"
+      }
+    }
+  ]
+}

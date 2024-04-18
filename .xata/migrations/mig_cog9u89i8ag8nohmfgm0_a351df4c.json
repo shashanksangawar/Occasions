@@ -1,0 +1,18 @@
+{
+  "id": "mig_cog9u89i8ag8nohmfgm0",
+  "parentID": "mig_cog9tqpi8ag8nohmfgl0",
+  "checksum": "1:a351df4c1eb7821139f75a2ae03720ecf4a187cac54560d1bc3efb5f772c4b22",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Road",
+          "type": "string",
+          "notNull": true,
+          "defaultValue": "Road"
+        },
+        "table": "user_address"
+      }
+    }
+  ]
+}

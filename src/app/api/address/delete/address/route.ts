@@ -1,18 +1,15 @@
-// http://localhost:3000/api/auth/account_delete
+// http://localhost:3000/api/address/delete/address
 
 import { NextRequest, NextResponse } from "next/server";
-import { account_delete } from "./logic/user";
+import { address_delete } from "./logic/delete";
 
-export async function DELETE(request: NextRequest) 
+//  Delete a User Address
+export async function DELETE(request: NextRequest)
 {
-    try
+    try 
     {
-
-        // For Adding a Single Product
         const data: JSON | any = await request.json();
-
-    
-        const delete_result: any = await account_delete(data); 
+        const delete_result: any = await address_delete(data); 
         if(delete_result.returncode==0)
         {
             
@@ -20,7 +17,7 @@ export async function DELETE(request: NextRequest)
             .json(
                 {
                     'returncode': 0,
-                    'message': 'Password Changed.',
+                    'message': 'Address Deleted',
                     'output': delete_result.output
                 },
                 {
@@ -42,18 +39,19 @@ export async function DELETE(request: NextRequest)
                 });
         
         }
-    
-    }
+
+    } 
     catch (error: any) 
     {
         return NextResponse.json(
             {
                 'returncode': 400,
                 'message': error.message,
-                'output': []
+                'output':[]
             },
             {
-                status: 400,
-            });
+                status: 400
+            }
+        );
     }
 }

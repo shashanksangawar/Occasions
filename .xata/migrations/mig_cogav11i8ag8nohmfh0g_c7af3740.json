@@ -1,0 +1,18 @@
+{
+  "id": "mig_cogav11i8ag8nohmfh0g",
+  "parentID": "mig_cogajtmp7f5ih5v52rjg",
+  "checksum": "1:c7af374082efe9d0e89fefade6fd8c37b71022022d20f40b231c2432b84552f8",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Room",
+          "type": "string",
+          "notNull": true,
+          "defaultValue": "Block No. 101"
+        },
+        "table": "user_address"
+      }
+    }
+  ]
+}

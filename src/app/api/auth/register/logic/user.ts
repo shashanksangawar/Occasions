@@ -1,4 +1,4 @@
-// pages/api/create/user.ts
+// /api/auth/register/logic/user.ts
 
 import { getXataClient } from "../../../../../xata";
 import bcrypt from 'bcrypt';

@@ -1,0 +1,18 @@
+{
+  "id": "mig_cog9v31i8ag8nohmfgo0",
+  "parentID": "mig_cog9urmp7f5ih5v52r9g",
+  "checksum": "1:73ee72ca64a0c0090db247c22ebaa63b084c2279a818ce1e12239d5ce2fcca13",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "City",
+          "type": "string",
+          "notNull": true,
+          "defaultValue": "City"
+        },
+        "table": "user_address"
+      }
+    }
+  ]
+}

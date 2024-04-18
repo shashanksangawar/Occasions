@@ -1,0 +1,18 @@
+{
+  "id": "mig_cog9tqpi8ag8nohmfgl0",
+  "parentID": "mig_cog9sg46btciiaoq7ueg",
+  "checksum": "1:12532a5119985a80be948e481b8cdc0d93f5af6d8f0084f5aa4da742bbfba3ed",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Apartment",
+          "type": "string",
+          "notNull": true,
+          "defaultValue": "Apartment"
+        },
+        "table": "user_address"
+      }
+    }
+  ]
+}
