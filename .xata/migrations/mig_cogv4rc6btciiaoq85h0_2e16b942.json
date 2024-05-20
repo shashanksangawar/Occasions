@@ -1,0 +1,19 @@
+{
+  "id": "mig_cogv4rc6btciiaoq85h0",
+  "parentID": "mig_cogv471i8ag8nohmfpc0",
+  "checksum": "1:2e16b942bdb7a33002280c0690e96441112b8bf5112113e60abe817376e5f011",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "ProductImages",
+          "type": "file[]",
+          "file[]": {
+            "defaultPublicAccess": true
+          }
+        },
+        "table": "product_details"
+      }
+    }
+  ]
+}

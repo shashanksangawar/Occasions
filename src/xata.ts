@@ -77,6 +77,53 @@ const tables = [
       },
     ],
   },
+  {
+    name: "product_details",
+    columns: [
+      { name: "Category", type: "string", notNull: true, defaultValue: "Male" },
+      {
+        name: "SubCategory",
+        type: "string",
+        notNull: true,
+        defaultValue: "Marriage Anniversary",
+      },
+      {
+        name: "Title",
+        type: "string",
+        notNull: true,
+        defaultValue: "Occasion Product 1",
+      },
+      {
+        name: "Description",
+        type: "text",
+        notNull: true,
+        defaultValue: "Description of the product.",
+      },
+      { name: "Ratings", type: "string", notNull: true, defaultValue: "5" },
+      {
+        name: "ProductImages",
+        type: "file[]",
+        "file[]": { defaultPublicAccess: true },
+      },
+      {
+        name: "ExperienceVideo",
+        type: "file[]",
+        "file[]": { defaultPublicAccess: true },
+      },
+      { name: "Price", type: "string", notNull: true, defaultValue: "10000" },
+      { name: "Features", type: "multiple" },
+      {
+        name: "AboutProduct",
+        type: "text",
+        notNull: true,
+        defaultValue: "About the Product",
+      },
+      { name: "Quantity", type: "int", notNull: true, defaultValue: "0" },
+    ],
+  },
+  { name: "order_bookings", columns: [] },
+  { name: "cart_bookings", columns: [] },
+  { name: "user_reviews", columns: [] },
 ] as const;
 
 export type SchemaTables = typeof tables;
@@ -88,9 +135,25 @@ export type UserDetailsRecord = UserDetails & XataRecord;
 export type UserAddress = InferredTypes["user_address"];
 export type UserAddressRecord = UserAddress & XataRecord;
 
+export type ProductDetails = InferredTypes["product_details"];
+export type ProductDetailsRecord = ProductDetails & XataRecord;
+
+export type OrderBookings = InferredTypes["order_bookings"];
+export type OrderBookingsRecord = OrderBookings & XataRecord;
+
+export type CartBookings = InferredTypes["cart_bookings"];
+export type CartBookingsRecord = CartBookings & XataRecord;
+
+export type UserReviews = InferredTypes["user_reviews"];
+export type UserReviewsRecord = UserReviews & XataRecord;
+
 export type DatabaseSchema = {
   user_details: UserDetailsRecord;
   user_address: UserAddressRecord;
+  product_details: ProductDetailsRecord;
+  order_bookings: OrderBookingsRecord;
+  cart_bookings: CartBookingsRecord;
+  user_reviews: UserReviewsRecord;
 };
 
 const DatabaseClient = buildClient();

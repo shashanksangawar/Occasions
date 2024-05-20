@@ -1,0 +1,19 @@
+{
+  "id": "mig_cogv55up7f5ih5v530k0",
+  "parentID": "mig_cogv4rc6btciiaoq85h0",
+  "checksum": "1:8b9acb8e51862e8c378b6f891221cc6f4f2dd1b1fa0ffb41b447808d0e865b81",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "ExperienceVideo",
+          "type": "file[]",
+          "file[]": {
+            "defaultPublicAccess": true
+          }
+        },
+        "table": "product_details"
+      }
+    }
+  ]
+}

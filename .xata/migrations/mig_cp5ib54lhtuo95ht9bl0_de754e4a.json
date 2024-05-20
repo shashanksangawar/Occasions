@@ -1,0 +1,12 @@
+{
+  "id": "mig_cp5ib54lhtuo95ht9bl0",
+  "parentID": "mig_cogv756p7f5ih5v530m0",
+  "checksum": "1:de754e4a2fc8864540dc16143409f7b439f0f45aef356824c7d56032426ec2a8",
+  "operations": [
+    {
+      "addTable": {
+        "table": "order_bookings"
+      }
+    }
+  ]
+}

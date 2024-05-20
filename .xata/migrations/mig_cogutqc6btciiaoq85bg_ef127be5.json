@@ -1,0 +1,18 @@
+{
+  "id": "mig_cogutqc6btciiaoq85bg",
+  "parentID": "mig_cogutkep7f5ih5v530g0",
+  "checksum": "1:ef127be5517e9af348e49e4820d18bd72098553606c2185bf42a6794dac0c163",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Category",
+          "type": "string",
+          "notNull": true,
+          "defaultValue": "Male"
+        },
+        "table": "product_details"
+      }
+    }
+  ]
+}

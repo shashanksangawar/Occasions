@@ -1,0 +1,12 @@
+{
+  "id": "mig_cp5ibfklhtuo95ht9bmg",
+  "parentID": "mig_cp5ibaenac7n4q9f4klg",
+  "checksum": "1:f3202b13edcfdbeb4bd3cd3c8f5e50aa5a8380fab6e449831292823723c8069e",
+  "operations": [
+    {
+      "addTable": {
+        "table": "user_reviews"
+      }
+    }
+  ]
+}

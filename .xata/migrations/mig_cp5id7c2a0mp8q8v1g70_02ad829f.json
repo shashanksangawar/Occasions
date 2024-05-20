@@ -1,0 +1,18 @@
+{
+  "id": "mig_cp5id7c2a0mp8q8v1g70",
+  "parentID": "mig_cp5ibfklhtuo95ht9bmg",
+  "checksum": "1:02ad829f136542180a67e3f1d8eb8a01b7464cfc90a86097df58ca5f6089ada9",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Quantity",
+          "type": "int",
+          "notNull": true,
+          "defaultValue": "0"
+        },
+        "table": "product_details"
+      }
+    }
+  ]
+}

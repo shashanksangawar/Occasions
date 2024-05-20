@@ -1,0 +1,18 @@
+{
+  "id": "mig_cogv5fpi8ag8nohmfpd0",
+  "parentID": "mig_cogv55up7f5ih5v530k0",
+  "checksum": "1:8e36aaf945614a72d371acbafeb2fd15ccaf87fbd2d5fecbc7d51f5ff21150c1",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Price",
+          "type": "string",
+          "notNull": true,
+          "defaultValue": "10000"
+        },
+        "table": "product_details"
+      }
+    }
+  ]
+}

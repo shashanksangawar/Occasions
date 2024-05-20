@@ -1,0 +1,18 @@
+{
+  "id": "mig_cogv35c6btciiaoq85g0",
+  "parentID": "mig_cogutqc6btciiaoq85bg",
+  "checksum": "1:37bed45ccbb782974e694a21b4837831bfac0c4ed70544caf177acfe614a39d1",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "SubCateory",
+          "type": "string",
+          "notNull": true,
+          "defaultValue": "Marriage Anniversary"
+        },
+        "table": "product_details"
+      }
+    }
+  ]
+}

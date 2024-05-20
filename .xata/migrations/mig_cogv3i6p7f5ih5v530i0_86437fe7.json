@@ -1,0 +1,18 @@
+{
+  "id": "mig_cogv3i6p7f5ih5v530i0",
+  "parentID": "mig_cogv35c6btciiaoq85g0",
+  "checksum": "1:86437fe754dec2455c1315cd3d61aee2502cf26db75e665067834fd899b985a6",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Title",
+          "type": "string",
+          "notNull": true,
+          "defaultValue": "Occasion Product 1"
+        },
+        "table": "product_details"
+      }
+    }
+  ]
+}

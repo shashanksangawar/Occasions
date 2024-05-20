@@ -1,0 +1,18 @@
+{
+  "id": "mig_cogv471i8ag8nohmfpc0",
+  "parentID": "mig_cogv3rep7f5ih5v530j0",
+  "checksum": "1:97e00bd66359d0bf84cff0c1488424c2cf70237448237951276ffd45d7d60418",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Ratings",
+          "type": "string",
+          "notNull": true,
+          "defaultValue": "5"
+        },
+        "table": "product_details"
+      }
+    }
+  ]
+}

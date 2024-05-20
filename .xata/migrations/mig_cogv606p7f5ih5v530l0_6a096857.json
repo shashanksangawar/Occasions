@@ -1,0 +1,16 @@
+{
+  "id": "mig_cogv606p7f5ih5v530l0",
+  "parentID": "mig_cogv5fpi8ag8nohmfpd0",
+  "checksum": "1:6a096857aa9c92782ce4f470ab930e42ca363043bdc6520680e78d8776f85c87",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Features",
+          "type": "multiple"
+        },
+        "table": "product_details"
+      }
+    }
+  ]
+}
